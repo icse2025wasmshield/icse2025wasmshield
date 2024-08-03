@@ -27,8 +27,9 @@ These models are pretrained with a batch_size of 64, an image_size of 64, a cont
 - **ResBin18** ( *Emprique60_2_ResBin18_woSA_b64_i64_pil_v128_rmax_t015* )
 - **ResBin8** ( *Emprique60_2_ResBin8_woSA_b64_i64_pil_v128_rmax_t015* )
 
-The models are available under the *saving_models* folder and can be loaded as follows:
+The models are available under the *saving_models* folder.
 
+Untrained models can be loaded as follows:
 ```
 from wasmshield.models.resbin import (
     build_resbin_8,
@@ -39,6 +40,19 @@ from wasmshield.models.resbin import (
 )
 resbin_8_handler = ResBinHandler(build_resbin_8())
 ```
+Pre-trained models can be loaded as follows:
+```
+model_name_8_woSA = 'Emprique60_2_ResBin8_woSA_b64_i64_pil_v128_rmax_t015'
+trainable_model_8_woSA = wasmshield.training.trainer.TrainableModel(
+    model=None, 
+    name=model_name_8_woSA, 
+    device=device
+)
+resbin_8_handler = wasmshield.models.resbin.ResBinHandler(
+    trainable_model_8_woSA.model.backbone
+)
+```
+
 
 ## Results
 The results of each research question is in a different notebook:
