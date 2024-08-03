@@ -1,9 +1,19 @@
 ## Important Note
 This repository contains the code for the ICSE2025WASMSHIELD paper submission 03/08/2024. We intend to share a more complete artifact for the 'artifact evaluation track' including the generated data. The most recent version of the artifact is available in the following branch: [updated_artifact_link](https://github.com/icse2025wasmshield/icse2025wasmshield/tree/artifact).
 
-## Structure
+## WASMShield Library
 
+The structure of the wasm-shield library is as follows:
 
+- **Approaches**: contains the implementations of JabberWock and MINOS.
+- **Evaluator**: contains the evaluation classes for each research question (*malware*, *malware_wobufscated*, *transforms*, *semantic*).
+- **Models**: contain the implementation of ResBin (*resbin.py*), the contrastive projection head (*contra.py*) aswell as the *base_classifier* and *base_handler* classes that aim to streamline the evaluation of multiple approaches using the same evaluator:
+    - *base_handler*: related to preprocessing and embedding generation.
+    - *base_classifier*: related to solving classification tasks.
+- **Training**: contains the implementation of the training algorithm.
+- **Preprocessing**: contains methods related to image and graph generation.
+- **Plotting**: contains methods related to visualization.
+- **Utils**: contains utility methods.
 
 ## Pre-Training
 
