@@ -1,7 +1,7 @@
 ## Important Note
 This repository contains the code for the ICSE2025WASMSHIELD paper submission 03/08/2024. We intend to share a more complete artifact for the 'artifact evaluation track' including the generated data. The most recent version of the artifact is available in the following branch: [updated_artifact_link](https://github.com/icse2025wasmshield/icse2025wasmshield/tree/artifact).
 
-## WASMShield Library
+## WASM-Shield Library
 
 The structure of the wasm-shield library is as follows:
 
